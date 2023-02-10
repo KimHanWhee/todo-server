@@ -48,4 +48,16 @@ class DevApplicationTests {
 		System.out.println(info.toString());
 	}
 
+	@Test
+	void builderTest(){
+		Members members = Members.builder()
+				.id(1)
+				.member_id("park")
+				.member_pw("1234")
+				.name("park")
+				.phone_number("01022222222")
+				.build();
+		System.out.println(members.toString());
+	}
+
 }

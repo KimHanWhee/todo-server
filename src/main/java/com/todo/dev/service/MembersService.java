@@ -7,11 +7,12 @@ import com.todo.dev.domain.response.MemberResponse;
 import com.todo.dev.repository.MembersRepository;
 import com.todo.dev.security.SecurityService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
-@AllArgsConstructor
+@ServiceS
+@RequiredArgsConstructor
 public class MembersService {
     private final MembersRepository membersRepository;
     private final SecurityService securityService;

@@ -5,12 +5,15 @@ import com.todo.dev.domain.request.SignUpRequest;
 import com.todo.dev.domain.response.MemberResponse;
 import com.todo.dev.service.MembersService;
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor // NonNull
 @RequestMapping("/members")
 public class MembersController {
+//    @NonNull
     private final MembersService membersService;
 
     @PostMapping("/login")
