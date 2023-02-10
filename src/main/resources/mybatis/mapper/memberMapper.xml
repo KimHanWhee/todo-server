@@ -3,11 +3,15 @@
 
 <mapper namespace="com.todo.dev.repository.MembersRepository">
     <select id="findByIdAndPw" resultType="Members">
-        select
+        SELECT
             id, member_id, member_pw, name, phone_number
-        from
+        FROM
             members
-        where
-            member_id = #{member_id} and member_pw = #{member_pw}
+        WHERE
+            member_id = #{member_id} AND member_pw = #{member_pw}
     </select>
+    <insert id="insertMembers" useGeneratedKeys="true" keyColumn="id">
+        INSERT INTO members(member_id, member_pw, name, phone_number)
+        VALUES (#{member_id}, #{member_pw}, #{name}, #{phone_number})
+    </insert>
 </mapper>
