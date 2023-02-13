@@ -12,4 +12,10 @@
         ELSE 1 END
         WHERE id = #{id} AND member_id = #{member_id}
     </update>
+    <select id="allTodos" resultType="Todos">
+        SELECT content, create_date, checked
+        FROM todos
+        WHERE member_id != #{member_id}
+        ORDER BY create_date DESC
+    </select>
 </mapper>
