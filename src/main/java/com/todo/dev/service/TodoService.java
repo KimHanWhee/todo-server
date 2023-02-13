@@ -20,4 +20,11 @@ public class TodoService {
         }
         return 0;
     }
+
+    public Integer checkTodo(Integer id, Integer member_id){
+        if(todosRepository.check(id, member_id) == 1){
+            return id;
+        }
+        return 0;
+    }
 }

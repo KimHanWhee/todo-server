@@ -8,4 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface TodosRepository {
     Integer insert(Todos todos);
+    Integer check(Integer id, Integer member_id);
 }
