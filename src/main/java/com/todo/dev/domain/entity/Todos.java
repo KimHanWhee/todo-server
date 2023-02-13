@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 @Builder
 public class Todos {
     private Integer id;
-    private Integer member_id;
-    private LocalDateTime create_date;
+    private Integer memberId;
+    private LocalDateTime createDate;
     private String content;
     private Boolean checked;
 }

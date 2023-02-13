@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface TodosRepository {
     Integer insert(Todos todos);
-    Integer check(Integer id, Integer member_id);
-    List<Todos> allTodos(Integer member_id);
-    List<Todos> myTodos(Integer member_id);
+    Integer check(Integer id, Integer memberId);
+    List<Todos> allTodos(Integer memberId);
+    List<Todos> myTodos(Integer memberId);
 }

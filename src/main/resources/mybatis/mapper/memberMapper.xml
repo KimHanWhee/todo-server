@@ -8,10 +8,10 @@
         FROM
             members
         WHERE
-            member_id = #{member_id} AND member_pw = #{member_pw}
+            member_id = #{memberId} AND member_pw = #{memberPw}
     </select>
     <insert id="insertMembers" useGeneratedKeys="true" keyColumn="id">
         INSERT INTO members(member_id, member_pw, name, phone_number)
-        VALUES (#{member_id}, #{member_pw}, #{name}, #{phone_number})
+        VALUES (#{memberId}, #{memberPw}, #{name}, #{phoneNumber})
     </insert>
 </mapper>

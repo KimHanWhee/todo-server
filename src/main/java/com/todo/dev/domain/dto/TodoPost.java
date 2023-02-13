@@ -9,12 +9,12 @@ import lombok.Getter;
 @Getter
 @Builder
 public class TodoPost {
-    private Integer member_id;
+    private Integer memberId;
     private String content;
 
     public Todos toDTO(){
         return Todos.builder()
-                .member_id(member_id)
+                .memberId(memberId)
                 .content(content)
                 .build();
     }

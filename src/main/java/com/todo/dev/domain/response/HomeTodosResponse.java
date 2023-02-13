@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 @Getter
 @RequiredArgsConstructor
 public class HomeTodosResponse {
-    private final LocalDateTime create_date;
+    private final LocalDateTime createDate;
     private final String content;
     private final Boolean checked;
 
     public HomeTodosResponse(Todos todos){
-        this.create_date = todos.getCreate_date();
+        this.createDate = todos.getCreateDate();
         this.content = todos.getContent();
         this.checked = todos.getChecked();
     }

@@ -17,12 +17,12 @@ public class MembersService {
 
     public MemberResponse loginService(LoginRequest request){
         Members loginMember = membersRepository.findByIdAndPw(request);
-        if(loginMember.getMember_id() != null) {
+        if(loginMember.getMemberId() != null) {
             String token = securityService.createToken(loginMember);
             return new MemberResponse(
                     loginMember.getId(),
                     loginMember.getName(),
-                    loginMember.getPhone_number(),
+                    loginMember.getPhoneNumber(),
                     token
             );
         }
@@ -32,7 +32,7 @@ public class MembersService {
     public MemberResponse signUpService(SignUpRequest request){
         Integer insertId = membersRepository.insertMembers(request);
         if(insertId!=null){
-            LoginRequest loginRequest = new LoginRequest(request.getMember_id(), request.getMember_pw());
+            LoginRequest loginRequest = new LoginRequest(request.getMemberId(), request.getMemberPw());
             return loginService(loginRequest);
         }
         return null;

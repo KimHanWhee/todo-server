@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @AllArgsConstructor @NoArgsConstructor
 public class Friends {
-    private Integer my_id;
-    private Integer target_id;
-    private LocalDateTime create_date;
+    private Integer myId;
+    private Integer targetId;
+    private LocalDateTime createDate;
 }

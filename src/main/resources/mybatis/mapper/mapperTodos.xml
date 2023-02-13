@@ -4,24 +4,24 @@
 <mapper namespace="com.todo.dev.repository.TodosRepository">
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO todos(member_id, content)
-        VALUES (#{member_id}, #{content})
+        VALUES (#{memberId}, #{content})
     </insert>
     <update id="check">
         UPDATE todos
         SET checked = CASE WHEN checked = 1 THEN 0
         ELSE 1 END
-        WHERE id = #{id} AND member_id = #{member_id}
+        WHERE id = #{id} AND member_id = #{memberId}
     </update>
     <select id="allTodos" resultType="Todos">
         SELECT content, create_date, checked
         FROM todos
-        WHERE member_id != #{member_id}
+        WHERE member_id != #{memberId}
         ORDER BY create_date DESC
     </select>
     <select id="myTodos" resultType="Todos">
         SELECT id, content, create_date, checked
         FROM todos
-        WHERE member_id = #{member_id}
+        WHERE member_id = #{memberId}
         ORDER BY create_date DESC
     </select>
 </mapper>

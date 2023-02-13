@@ -23,7 +23,7 @@ public class TodosController {
     public Integer postTodos(@RequestBody TodosPostRequest request){
         Integer member_id = securityService.parseToken(securityService.getToken()).getId();
         TodoPost todoPost = TodoPost.builder()
-                .member_id(member_id).content(request.getContent())
+                .memberId(member_id).content(request.getContent())
                 .build();
         return todoService.insertTodoService(todoPost);
     }
