@@ -13,12 +13,11 @@ import java.lang.annotation.ElementType;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/todos")
-@TokenRequired
 public class TodosController {
     private final TodoService todoService;
     private final SecurityService securityService;
 
-    @PostMapping
+    @PostMapping @TokenRequired
     public Integer postTodos(@RequestBody TodosPostRequest request){
         Integer member_id = securityService.parseToken(securityService.getToken()).getId();
         TodoPost todoPost = TodoPost.builder()
@@ -27,7 +26,7 @@ public class TodosController {
         return todoService.insertTodoService(todoPost);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id}") @TokenRequired
     public Integer checkTodos(@PathVariable("id") Integer id){
         Integer member_id = securityService.parseToken(securityService.getToken()).getId();
         return todoService.checkTodo(id, member_id);
