@@ -10,3 +10,8 @@ mybatis:
 jwt:
   SECRET_KEY: asdfjklwegjiwaasdfjkalgiefjksifewlgregasdglkgjsijewiroiasfdhtjhsdhjwe38g438jrhsdgwufgkamfg3743gfqg4378q8bq4yerofggiaysfgbfgn84qg7wcby8fgf237gybqwe
   EXP_TIME: 3600000
+
+# swagger-ui custom path
+  springdoc:
+    swagger-ui:
+      path: /swagger-ui.html

@@ -1,4 +1,4 @@
-package com.todo.dev.domain.dto;
+package com.todo.dev.domain.entity;
 
 import com.todo.dev.domain.request.SignUpRequest;
 import lombok.*;

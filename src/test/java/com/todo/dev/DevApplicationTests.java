@@ -1,15 +1,13 @@
 package com.todo.dev;
 
 import com.todo.dev.security.SecurityService;
-import com.todo.dev.domain.dto.Members;
+import com.todo.dev.domain.entity.Members;
 import com.todo.dev.domain.request.LoginRequest;
 import com.todo.dev.repository.MembersRepository;
 import com.todo.dev.security.TokenInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.awt.*;
 
 @SpringBootTest
 class DevApplicationTests {

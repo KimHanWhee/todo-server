@@ -1,5 +1,6 @@
 package com.todo.dev.domain.dto;
 
+import com.todo.dev.domain.entity.Todos;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,7 +1,6 @@
 package com.todo.dev.controller;
 
 import com.todo.dev.domain.dto.TodoPost;
-import com.todo.dev.domain.dto.Todos;
 import com.todo.dev.domain.request.TodosPostRequest;
 import com.todo.dev.domain.response.HomeTodosResponse;
 import com.todo.dev.security.SecurityService;
@@ -10,7 +9,6 @@ import com.todo.dev.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.annotation.ElementType;
 import java.util.List;
 
 @RestController

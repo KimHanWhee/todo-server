@@ -7,6 +7,7 @@
         <package name="com.todo.dev.domain.dto"/>
         <package name="com.todo.dev.domain.request"/>
         <package name="com.todo.dev.domain.response"/>
+        <package name="com.todo.dev.domain.entity"/>
     </typeAliases>
     <mappers>
         <mapper resource="mybatis/mapper/memberMapper.xml" />
