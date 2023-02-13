@@ -1,5 +1,6 @@
 package com.todo.dev.service;
 
+import com.todo.dev.domain.dto.FriendTodos;
 import com.todo.dev.domain.dto.TodoPost;
 import com.todo.dev.domain.entity.Todos;
 import com.todo.dev.domain.response.HomeTodosResponse;
@@ -41,5 +42,8 @@ public class TodoService {
         return todos.stream()
                 .map(MyTodoResponse::new)
                 .collect(Collectors.toList());
+    }
+    public List<FriendTodos> getFriendTodos(Integer myId){
+        return todosRepository.myFriendTodos(myId);
     }
 }
